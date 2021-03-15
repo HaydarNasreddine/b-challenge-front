@@ -40,6 +40,9 @@ export default function SignUpForm() {
         });
     }
 
+    const handleSigninClick = (value) => {
+        history.push('/')
+    }
     function Banner1() {
         return success ? <Banner
             title="Your account is successfully created !"
@@ -74,6 +77,9 @@ export default function SignUpForm() {
                             <TextField type="password" label="Confirm Password" value={passwordConf} onChange={handlePasswordConfChange} />
                             <br></br>
                             <Button submit fullWidth>Login</Button>
+                            <br></br>
+                            {/* <a style={{width:'100%', display: 'block', textAlign: 'center'}} onClick={handleSigninClick} href="/signup">Already have an account ? Login</a> */}
+
                         </Form>
                     </Card.Section>
                 </Card>

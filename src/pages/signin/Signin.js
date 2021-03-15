@@ -14,6 +14,7 @@ export default function SignInForm() {
     const handleEmailChange = useCallback(value => setEmail(value), []);
     const handlePasswordChange = useCallback(value => setPassword(value), []);
 
+    const handleSignupClick = (value) => {history.push('/signup')}
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
@@ -50,6 +51,8 @@ export default function SignInForm() {
                             <br></br>
                             <br></br>
                             <Button submit fullWidth>Login</Button>
+                            <br></br>
+                            <a style={{width:'100%', display: 'block', textAlign: 'center', cursor: 'pointer'}} onClick={handleSignupClick}>Create a new account</a>
                         </Form>
                     </Card.Section>
                 </Card>
